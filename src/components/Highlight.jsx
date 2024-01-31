@@ -1,4 +1,7 @@
 export const Highlight = ({ highlights }) => {
+  // let count;
+  // const add = () => count + 1;
+  // const sub = () => count - 1;
   return (
     <div className="rounded-xl flex flex-wrap w-[1220px] object-cover m-auto gap-5">
       <div className="carousel w-full">
@@ -23,7 +26,8 @@ export const Highlight = ({ highlights }) => {
             </div>
             <div className="flex gap-1.5 mt-4">
               <a
-                href={`#${key - 1}`}
+                href={`#${key == 0 ? 3 : key - 1}`}
+                // href={`#${sub()}`}
                 className="flex justify-center items-center w-10 h-10 rounded-md border border-[#696A75]"
               >
                 <svg
@@ -42,7 +46,8 @@ export const Highlight = ({ highlights }) => {
                 </svg>
               </a>
               <a
-                href={`#${key + 1}`}
+                href={`#${key == 3 ? 0 : key + 1}`}
+                // href={`#${add()}`}
                 className="flex justify-center items-center w-10 h-10 rounded-md border border-[#696A75]"
               >
                 <svg

@@ -125,7 +125,7 @@ export const Footer = () => (
           </svg>
         </div>
       </div>
-      <div className="py-8 flex gap-16 justify-between">
+      <div className="py-8 flex gap-16 justify-between border-t border-[#DCDDDF]">
         <div className="flex gap-2.5">
           <svg
             xmlns="http://www.w3.org/2000/svg"

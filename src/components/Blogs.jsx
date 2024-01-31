@@ -1,20 +1,11 @@
+import { Navigationbar } from ".";
 export const Blogs = ({ blogs }) => {
   return (
     <div className="w-[1220px] m-auto flex flex-col gap-8">
-      <div className="flex flex-col gap-8">
-        <h2 className="font-bold text-2xl text-[#181A2A]">All Blog Post</h2>
-        <div className="flex gap-5">
-          <a href="">All</a>
-          <a href="">Design</a>
-          <a href="">Travel</a>
-          <a href="">Fashion</a>
-          <a href="">Technology</a>
-          <a href="">Branding</a>
-        </div>
-      </div>
+      <Navigationbar />
       <div className="flex flex-wrap  gap-5">
         {blogs.map((blog) => (
-          <div className="Card w-[390px] h-[476px] flex flex-col gap-4 rounded-xl p-4 border border-[#E8E8EA]">
+          <div className="Card w-[390px] h-[488px] flex flex-col gap-4 rounded-xl p-4 border border-[#E8E8EA]">
             <div>
               <img
                 className="h-60 w-[360px] object-fit rounded-md"
@@ -22,12 +13,12 @@ export const Blogs = ({ blogs }) => {
                 alt=""
               />
             </div>
-            <div className="p-2 flex flex-col gap-5">
+            <div className="h-[188px] p-2 flex flex-col gap-5 justify-between">
               <div>
                 <button className="mb-4 px-2.5 py-1 flex justify-center items-center rounded-md text-[#4B6BFB] bg-[#4b6bfb0d] font-medium text-sm ">
-                  Technology
+                  {blog.tag_list[0]}
                 </button>
-                <p className="font-semibold text-2xl text-[#181A2A]">
+                <p className="font-semibold text-2xl text-[#181A2A] ">
                   {blog.title}
                 </p>
               </div>
