@@ -6,14 +6,18 @@ export const Highlight = ({ highlights }) => {
           <div id={key} className="carousel-item flex-col items-end w-full">
             <div className="w-[1220px] h-[600px] relative">
               <img
-                src={highlight.cover_image}
+                src={highlight.social_image}
                 className=" w-[1220px] h-[600px] object-cover absolute z-10 rounded-xl"
               />
               <div className="w-[598px] h-[252px] absolute z-20 top-[335px] left-[11px] p-10 flex flex-col gap-6 bg-white rounded-xl border border-[#E8E8EA]">
                 <div>
-                  <button className="mb-4 px-2.5 py-1 flex justify-center items-center rounded-md text-white bg-[#4B6BFB] font-medium text-sm ">
-                    Technology
-                  </button>
+                  <div className="flex gap-2">
+                    {highlight.tag_list.map((e) => (
+                      <button className="mb-4 px-2.5 py-1 flex justify-center items-center rounded-md text-white bg-[#4B6BFB] font-medium text-sm ">
+                        {e}
+                      </button>
+                    ))}
+                  </div>
                   <p className="font-semibold text-3xl text-[#181A2A]">
                     {highlight.title}
                   </p>
