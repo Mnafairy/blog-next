@@ -1,17 +1,26 @@
 import { useRouter } from "next/router";
+import Link from "next/link";
+import { MetablogIcon } from "./icons/MetablogIcon";
 export const Header = () => {
   const router = useRouter();
   return (
     <div className="w-[1220px] m-auto flex gap-[118px] items-start py-8">
-      <img src="Logo.png" alt="" />
+      <Link href={"/"}>
+        <div className="flex justify-center items-center gap-2">
+          <MetablogIcon />
+          <p className=" text-2xl">
+            Meta<span className="text-[#141624] font-extrabold">Blog</span>
+          </p>
+        </div>
+      </Link>
       <div className="flex gap-[21px]">
         <div className="w-[670px] flex justify-center items-center gap-10">
           <button onClick={() => router.push("/")}>Home</button>
-          <button onClick={() => router.push("blog")}>Blog</button>
-          <button onClick={() => router.push("contact")}>Contact</button>
+          <Link href={"/blog"}>Blog</Link>
+          <Link href={"/contact"}>Contact</Link>
         </div>
-        <div className="flex items-center gap-3 py-2 px-4 ">
-          <input type="text" placeholder="Search" />
+        <div className="flex items-center gap-3 py-2 px-4 bg-[#F4F4F5] rounded-md">
+          <input type="text" placeholder="Search" className="bg-[#F4F4F5]" />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={16}

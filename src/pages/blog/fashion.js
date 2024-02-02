@@ -16,7 +16,7 @@ const Page = ({ data }) => {
       <Navigationbar />
       <div className="flex flex-wrap  gap-5">
         {articles.map((blog) => (
-          <BlogCard blog={blog} />
+          <BlogCard blog={blog} id={blog.id} />
         ))}
       </div>
       <div className="m-auto">

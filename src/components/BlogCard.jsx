@@ -2,7 +2,7 @@ import Link from "next/link";
 export const BlogCard = ({ blog, id }) => {
   return (
     <Link href={`/blog/articles/${id}`}>
-      <div className="Card w-[390px] min-h-[488px] flex flex-col gap-4 rounded-xl p-4 border border-[#E8E8EA]">
+      <div className="Card w-[390px] h-[488px] flex flex-col gap-4 rounded-xl p-4 border border-[#E8E8EA]">
         <div>
           <img
             className="h-60 w-[360px] object-fit rounded-md"
@@ -10,7 +10,7 @@ export const BlogCard = ({ blog, id }) => {
             alt=""
           />
         </div>
-        <div className="p-2 flex flex-col gap-5 min-h-[200px] justify-between">
+        <div className="p-2 flex flex-col gap-5 h-[200px] justify-between">
           <div>
             <div className="flex flex-wrap gap-2">
               {blog.tag_list.map((e) => (
@@ -26,7 +26,7 @@ export const BlogCard = ({ blog, id }) => {
               <div className="w-9 h-9 rounded-full">
                 <img
                   className="w-9 h-9 rounded-full"
-                  src={blog.user.profile_image_90}
+                  src={blog.user.profile_image}
                   alt=""
                 />
               </div>

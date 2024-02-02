@@ -1,4 +1,4 @@
-import {Blogs, Trending, Highlight } from "@/components";
+import { Blogs, Trending, Highlight } from "@/components";
 const Home = ({ blogs, highlights, trendings }) => {
   return (
     <div className="flex flex-col gap-[100px]">
@@ -11,12 +11,14 @@ const Home = ({ blogs, highlights, trendings }) => {
 export default Home;
 
 export const getStaticProps = async () => {
-  const highlight = await fetch("https://dev.to/api/articles?top=5&per_page=4");
+  const highlight = await fetch("https://dev.to/api/articles?top=4&per_page=4");
   const highlights = await highlight.json();
-  const trending = await fetch("https://dev.to/api/articles?top=5&per_page=4");
+  const trending = await fetch(
+    "https://dev.to/api/articles?state=rising&per_page=4"
+  );
   const trendings = await trending.json();
   const blog = await fetch("https://dev.to/api/articles?page=4&per_page=15");
   const blogs = await blog.json();
-  console.log(blogs);
   return { props: { blogs, highlights, trendings } };
 };
+  

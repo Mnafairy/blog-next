@@ -1,30 +1,33 @@
+import Link from "next/link";
 export const Highlight = ({ highlights }) => {
   return (
     <div className="rounded-xl flex flex-wrap w-[1220px] object-cover m-auto gap-5">
       <div className="carousel w-full">
         {highlights.map((highlight, key) => (
           <div id={key} className="carousel-item flex-col items-end w-full">
-            <div className="w-[1220px] h-[600px] relative">
-              <img
-                src={highlight.social_image}
-                className=" w-[1220px] h-[600px] object-cover absolute z-10 rounded-xl"
-              />
-              <div className="w-[598px] h-[252px] absolute z-20 top-[335px] left-[11px] p-10 flex flex-col gap-6 bg-white rounded-xl border border-[#E8E8EA]">
-                <div>
-                  <div className="flex gap-2">
-                    {highlight.tag_list.map((e) => (
-                      <button className="mb-4 px-2.5 py-1 flex justify-center items-center rounded-md text-white bg-[#4B6BFB] font-medium text-sm ">
-                        {e}
-                      </button>
-                    ))}
+            <Link href={`/blog/articles/${highlight.id}`}>
+              <div className="w-[1220px] h-[600px] relative">
+                <img
+                  src={highlight.social_image}
+                  className=" w-[1220px] h-[600px] object-cover absolute z-10 rounded-xl"
+                />
+                <div className="w-[598px] h-[252px] absolute z-20 top-[335px] left-[11px] p-10 flex flex-col gap-6 bg-white rounded-xl border border-[#E8E8EA]">
+                  <div>
+                    <div className="flex gap-2">
+                      {highlight.tag_list.map((e) => (
+                        <button className="mb-4 px-2.5 py-1 flex justify-center items-center rounded-md text-white bg-[#4B6BFB] font-medium text-sm ">
+                          {e}
+                        </button>
+                      ))}
+                    </div>
+                    <p className="font-semibold text-3xl text-[#181A2A]">
+                      {highlight.title}
+                    </p>
                   </div>
-                  <p className="font-semibold text-3xl text-[#181A2A]">
-                    {highlight.title}
-                  </p>
+                  <p className="text-[#97989F]">August 20, 2022</p>
                 </div>
-                <p className="text-[#97989F]">August 20, 2022</p>
               </div>
-            </div>
+            </Link>
             <div className="flex gap-1.5 mt-4 mr-1">
               <a
                 href={`#${key == 0 ? 3 : key - 1}`}
