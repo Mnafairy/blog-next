@@ -14,11 +14,11 @@ export const Trending = ({ trendings }) => {
               />
               <div className="absolute w-[230px] h-[75px] z-20 top-[140px] left-7">
                 <div className="flex flex-wrap gap-1">
-                  {trending.tag_list.map((e) => (
-                    <button className="mb-4 px-2.5 py-1 flex justify-center items-center rounded-md text-white bg-[#4B6BFB] font-medium text-xs ">
-                      {e}
-                    </button>
-                  ))}
+                  {/* {trending.tag_list.map((e) => ( */}
+                  <button className="mb-4 px-2.5 py-1 flex justify-center items-center rounded-md text-white bg-[#4B6BFB] font-medium text-xs ">
+                    {trending.tag_list[0]}
+                  </button>
+                  {/* ))} */}
                 </div>
                 <p className="text-lg font-semibold text-white">
                   {trending.title}

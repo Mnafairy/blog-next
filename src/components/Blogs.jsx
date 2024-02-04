@@ -18,11 +18,11 @@ export const Blogs = ({ blogs }) => {
               <div className="h-[188px] p-2 flex flex-col gap-5 justify-between">
                 <div>
                   <div className="flex gap-2 flex-wrap">
-                    {blog.tag_list.map((e) => (
-                      <button className="mb-4 px-2.5 py-1 flex justify-center items-center rounded-md text-[#4B6BFB] bg-[#4b6bfb0d] font-medium text-sm ">
-                        {e}
-                      </button>
-                    ))}
+                    {/* {blog.tag_list.map((e) => ( */}
+                    <button className="mb-4 px-2.5 py-1 flex justify-center items-center rounded-md text-[#4B6BFB] bg-[#4b6bfb0d] font-medium text-sm ">
+                      {blog.tag_list[0]}
+                    </button>
+                    {/* ))} */}
                   </div>
                   <p className="font-semibold text-2xl text-[#181A2A] ">
                     {blog.title}
