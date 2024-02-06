@@ -19,7 +19,7 @@ const Home = ({ blogs, highlights, trendings }) => {
     }
     getTrending();
     async function getHighlight() {
-      const res = await fetch("http://localhost:4000/api/trendings");
+      const res = await fetch("http://localhost:4000/api/highlights");
       const data = await res.json();
       setHighglight(data);
     }
