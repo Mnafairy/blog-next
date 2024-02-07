@@ -6,7 +6,7 @@ export const Trending = ({ trendings }) => {
       <div className="flex flex-wrap  gap-5">
         {trendings.map((trending) => (
           <Link href={`/blog/articles/${trending.id}`}>
-            <div className="w-[289px] h-80 relative">
+            <div className="w-[289px] h-80 relative \">
               <img
                 className="absolute w-[289px] h-80 object-cover z-10 rounded-xl"
                 src={trending.social_image}
@@ -20,7 +20,7 @@ export const Trending = ({ trendings }) => {
                   </button>
                   {/* ))} */}
                 </div>
-                <p className="text-lg font-semibold text-white">
+                <p className="text-lg font-semibold text-white ">
                   {trending.title}
                 </p>
               </div>
