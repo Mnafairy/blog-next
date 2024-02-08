@@ -1,6 +1,7 @@
 import { Navigationbar, BlogCard } from "@/components";
 import { useState } from "react";
-
+import Link from "next/link";
+const title = ["All", "design", "travel", "fashion", "technology", "branding"];
 const Page = ({ data }) => {
   const [articles, setArticles] = useState(data);
   const [pageNumber, setPageNumber] = useState(1);
@@ -14,7 +15,13 @@ const Page = ({ data }) => {
   }
   return (
     <div className="w-[1220px] m-auto flex flex-col gap-8">
-      <Navigationbar />
+      <div className="flex flex-col gap-8 font-bold text-[#495057]">
+        <div className="flex gap-5">
+          {title.map((title) => (
+            <Link href={`/blog/${title}`}>{title}</Link>
+          ))}
+        </div>
+      </div>
       <div className="flex flex-wrap  gap-5">
         {articles.map((blog) => (
           <BlogCard blog={blog} id={blog.id} />

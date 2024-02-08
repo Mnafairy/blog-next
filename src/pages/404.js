@@ -2,7 +2,9 @@ import Link from "next/link";
 export default function Custom404() {
   return (
     <div className="w-[600px] flex m-auto gap-[40px]">
-      <p className=" text-7xl">404</p>
+      <div className="flex items-center">
+        <p className=" text-7xl ">404</p>
+      </div>
       <div className="border-r-2"></div>
       <div className="flex flex-col gap-10">
         <p className="font-semibold text-2xl">Page Not Found</p>

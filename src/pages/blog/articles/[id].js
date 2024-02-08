@@ -1,7 +1,5 @@
 import parse from "html-react-parser";
 const Page = ({ data }) => {
-  console.log("data:", data);
-  console.log(data.body_html);
   return (
     <div className="w-[1220px] m-auto flex flex-col gap-[30px]">
       <div className="font-semibold text-4xl text-[#181A2A]">{data.title}</div>
