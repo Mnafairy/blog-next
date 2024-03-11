@@ -7,7 +7,7 @@ export const Blogs = ({ blogs }) => {
       <div className="flex flex-wrap gap-5">
         {blogs.map((blog) => (
           <Link href={`/blog/articles/${blog.id}`}>
-            <div className="Card w-[390px]  flex flex-col gap-4 rounded-xl p-4 border border-[#E8E8EA]">
+            <div className="Card w-[390px] h-[500px]  flex flex-col  gap-4 rounded-xl p-4 border border-[#E8E8EA]">
               <div>
                 <img
                   className="h-60 w-[360px] object-fit rounded-md"
@@ -15,7 +15,7 @@ export const Blogs = ({ blogs }) => {
                   alt=""
                 />
               </div>
-              <div className="p-2 flex flex-col gap-5 justify-between">
+              <div className="p-2 flex flex-col h-[200px] gap-5 justify-between">
                 <div>
                   <div className="flex gap-2 flex-wrap">
                     {/* {blog.tag_list.map((e) => ( */}
